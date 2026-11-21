@@ -85,11 +85,12 @@ against the task's `tests/` directory when copying compose artifacts, which fail
 
 ```bash
 export PYTHONPATH="$ADAPTER_DIR"
-uvx --from harbor==0.23.0 harbor run -c penguinharness-benchmark-swe-bench-lite/job.yaml \
+uv run prepare.py penguinharness-benchmark-swe-bench-lite &&
+  uvx --from harbor==0.23.0 harbor run -c penguinharness-benchmark-swe-bench-lite/job.yaml \
   --job-name swe-bench-attempt-1 -o "$PWD/jobs" -y
 ```
 
-Validate the config without starting a container with `--dry-run`. The config names
+With `--dry-run`, Harbor validates all 300 trials before starting any containers. An unprepared task fails validation. The config names
 `deepseek/deepseek-flash` and allows `api.deepseek.com`; change `model_name` and
 `extra_allowed_hosts` to the model configured in your PenguinHarness. Images are pulled by
 digest on first use; the verifier builds from `tests/Dockerfile` on first use.
