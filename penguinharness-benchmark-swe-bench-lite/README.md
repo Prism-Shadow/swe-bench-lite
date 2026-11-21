@@ -145,5 +145,4 @@ The generator verifies every input file against `manifest.json` before writing.
 The SWE-bench harness is MIT. The task repository (`SWE-bench/swe-bench-tasks`) and the
 dataset card declare no licence at the pinned revisions, and one selected repository
 (`pylint-dev/pylint`) is GPL-2.0. Redistribution of these task files has not been cleared
-with the upstream maintainers; the package is submitted with `status = "draft"` for that
-reason.
+with the upstream maintainers.

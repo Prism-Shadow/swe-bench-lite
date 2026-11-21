@@ -75,5 +75,4 @@ first use. Docker Hub access is therefore required on the evaluating machine.
   patches and test material.
 
 The generated task files are not relicensed under this repository's Apache-2.0 license.
-Redistribution has not been cleared with the upstream maintainers; the package is
-submitted as a draft.
+Redistribution has not been cleared with the upstream maintainers.
